@@ -34,7 +34,7 @@ public class StudentController {
 		return "Student Added Sucssesfully";
 		
 	}
-//----------------------------- Select --------------------------------------------
+//----------------------------- Select By id   --------------------------------------------
 	
 	
 	@PostMapping("/student/id/{id}")
@@ -64,7 +64,7 @@ public class StudentController {
 		 pk.getById1 (s);
 		return  "Update Succesfully";
 	}
-//---------------------------------------- Select All ------------------------------------------
+//---------------------------------------- Select All Student ------------------------------------------
 	@GetMapping("/AllStudent")
 	public List<Student>getAllStudent(){
 		
@@ -73,8 +73,8 @@ public class StudentController {
 	}
 //------------------------------------------- Select By Name --------------------------------------------------	
 	@GetMapping("/name/{name}")
-	public Student findByName(@PathVariable String name){
-		Student s = pk. findByName(name);
+	public List<Student> getByName(@PathVariable String name){
+		List<Student> s = pk. getByName(name);
 		
 		return s;
 	}

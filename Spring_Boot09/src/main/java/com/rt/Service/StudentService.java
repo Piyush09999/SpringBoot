@@ -60,8 +60,16 @@ public class StudentService {
 		return list;
 	}
 //------------------------------------------ Select for Name -------------------
-	public Student findByName(String name) {
-		Student list = Dao.findByName(name);
+
+	//	public Student findByName(String name) {
+//		Student list = Dao.findByName(name);
+//		
+//		return list;
+//	}
+	
+	public List<Student> getByName(String name) {
+		
+		List<Student>list=Dao.stn(name);
 		
 		return list;
 	}
